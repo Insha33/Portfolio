@@ -509,9 +509,22 @@ footer a:hover {
   font-weight: 650;
   gap: 8px;
 }
-.company-shell svg {
-  width: 29px;
-  height: 29px;
+.brand-logo {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.experience-strip .shell-logo {
+  width: 36px;
+  height: 34px;
+}
+.experience-strip .sap-logo {
+  width: 64px;
+  height: 32px;
+}
+.experience-strip .nit-logo {
+  width: 44px;
+  height: 44px;
 }
 .company-sap {
   font-weight: 800;
@@ -534,9 +547,6 @@ footer a:hover {
   gap: 10px;
   font-size: 17px;
   font-weight: 550;
-}
-.nit-emblem {
-  font-size: 29px;
 }
 .strip-note {
   font-size: 10px;
@@ -1167,8 +1177,26 @@ footer a:hover {
   font-weight: 600;
   line-height: 1.5;
 }
-.timeline h3 > span {
-  margin-left: 15px;
+.timeline-company {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 34px;
+}
+.paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.paper-link:hover {
+  color: #76529e;
+}
+.timeline article:last-child {
+  border-bottom: 1px solid var(--line);
 }
 .timeline article > div > p {
   font-size: 11px;
@@ -1997,8 +2025,17 @@ dialog .source-note {
   .company-shell {
     font-size: 18px;
   }
-  .company-shell svg {
+  .experience-strip .shell-logo {
     width: 25px;
+    height: 25px;
+  }
+  .experience-strip .sap-logo {
+    width: 44px;
+    height: 24px;
+  }
+  .experience-strip .nit-logo {
+    width: 30px;
+    height: 30px;
   }
   .company-sap {
     font-size: 22px;
@@ -2010,9 +2047,6 @@ dialog .source-note {
   .company-nit {
     font-size: 12px;
     gap: 5px;
-  }
-  .nit-emblem {
-    font-size: 23px;
   }
   .experience-strip {
     gap: 14px;
