@@ -97,8 +97,18 @@ h3 {
 footer a:hover {
   color: #76529e;
 }
-.resume-link span {
-  padding-left: 7px;
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.action-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: transform 0.2s;
 }
 .nav-contact {
   font-size: 13px;
@@ -106,7 +116,8 @@ footer a:hover {
   padding: 12px 19px;
   border-radius: 30px;
   display: flex;
-  gap: 24px;
+  gap: 10px;
+  align-items: center;
   transition: background 0.2s;
 }
 .nav-contact:hover {
@@ -201,30 +212,34 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  padding: 17px 23px;
-  border-radius: 6px;
+  gap: 10px;
+  padding: 14px 20px;
+  min-height: 48px;
+  border-radius: 8px;
+  line-height: 1.3;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 550;
   transition:
     transform 0.2s,
     background 0.2s;
 }
 .button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-1px);
   background: #434638;
 }
 .primary {
   background: var(--ink);
   color: #fff;
 }
-.button span {
-  font-size: 18px;
+.button:hover .action-icon,
+.nav-contact:hover .action-icon,
+.social-link:hover .action-icon {
+  transform: translate(1px, -1px);
 }
 .text-link {
   font-size: 12px;
   display: inline-flex;
-  gap: 15px;
+  gap: 8px;
   align-items: center;
 }
 .hero-footnote {
@@ -1268,12 +1283,18 @@ footer a:hover {
   margin-right: auto;
 }
 .copy-button {
-  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
   background: transparent;
-  padding: 12px 0;
+  padding: 12px;
+  min-height: 44px;
+  border-radius: 8px;
+  transition: background 0.2s;
 }
-.copy-button > span {
-  margin-left: 10px;
+.copy-button:hover {
+  background: #ffffff45;
 }
 .copy-status {
   font-size: 11px;
@@ -1302,8 +1323,42 @@ footer > span {
 }
 footer > div {
   display: flex;
-  gap: 22px;
-  font-size: 10px;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+footer .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid #d5d8cd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.3;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+footer .social-link:hover {
+  background: #eeebef;
+  border-color: #baabc9;
+}
+.social-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 11px;
+  margin-left: 8px;
 }
 .skip-link {
   clip-path: inset(50%);
@@ -1485,8 +1540,7 @@ dialog .source-note {
     gap: 18px;
   }
   .button {
-    gap: 20px;
-    padding: 15px 19px;
+    padding: 14px 18px;
   }
   .hero-intro {
     font-size: 14px;
@@ -2230,13 +2284,20 @@ dialog .source-note {
     padding: 14px 18px;
   }
   .copy-button {
-    font-size: 10px;
+    font-size: 12px;
   }
   footer > span {
     font-size: 7px;
   }
   footer > div {
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  footer .social-link {
+    flex: 1;
+  }
+  .back-to-top {
+    margin-left: auto;
   }
   dialog {
     padding: 30px 24px;

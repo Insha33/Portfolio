@@ -1,4 +1,5 @@
-const arrow = '<span aria-hidden="true">↗</span>';
+const arrow =
+  '<svg class="action-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 const projects = [
   {
     id: "deep",
