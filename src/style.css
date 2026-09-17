@@ -1122,24 +1122,20 @@ footer a:hover {
 .about-section h2 {
   font-size: 38px;
 }
-.about-note {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 39px;
+.about-photo {
+  max-width: 440px;
+  margin: 28px 0 0;
+  padding: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px #2628220a;
 }
-.about-note > span {
-  font-size: 59px;
-  font-weight: 400;
-  color: #899574;
-}
-.about-note > p {
-  font-family: Georgia;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #69745b;
-  transform: rotate(-4deg);
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 .about-right > p {
   font-size: 13px;
@@ -1883,9 +1879,6 @@ dialog .source-note {
   }
   .about-section h2 {
     font-size: 40px;
-  }
-  .about-note {
-    display: none;
   }
   .about-right .about-lead {
     font-size: 17px;

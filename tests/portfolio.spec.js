@@ -51,6 +51,12 @@ for (const width of [360, 390, 768, 1440]) {
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBeTruthy();
+    const portrait = page.locator(".about-photo img");
+    await portrait.scrollIntoViewIfNeeded();
+    await expect(portrait).toBeVisible();
+    await expect
+      .poll(() => portrait.evaluate((img) => img.complete && img.naturalWidth > 0))
+      .toBeTruthy();
     await page.locator("#contact").scrollIntoViewIfNeeded();
     await expect(page.getByRole("link", { name: "Say hello" })).toBeVisible();
     if (width === 390 || width === 1440) {
