@@ -1116,15 +1116,20 @@ footer a:hover {
 }
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 75px;
+  grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+  gap: 28px 75px;
+  align-items: start;
+}
+.about-heading {
+  grid-column: 1 / -1;
 }
 .about-section h2 {
   font-size: 38px;
 }
 .about-photo {
+  width: 100%;
   max-width: 440px;
-  margin: 28px 0 0;
+  margin: 0;
   padding: 8px;
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1595,7 +1600,8 @@ dialog .source-note {
     right: 25px;
   }
   .about-layout {
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 40px;
   }
   .about-section h2 {
     font-size: 32px;
