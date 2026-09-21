@@ -1312,6 +1312,10 @@ footer {
   gap: 20px;
   padding-bottom: 33px;
 }
+/* Leave room for the floating chat launcher when the embed is present. */
+body:has(#asksila-widget-root) footer {
+  padding-bottom: 128px;
+}
 footer .wordmark {
   font-size: 25px;
 }
