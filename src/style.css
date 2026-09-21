@@ -1312,9 +1312,9 @@ footer {
   gap: 20px;
   padding-bottom: 33px;
 }
-/* Leave room for the floating chat launcher when the embed is present. */
-body:has(#asksila-widget-root) footer {
-  padding-bottom: 128px;
+/* Share the footer row with the launcher instead of adding empty space below it. */
+body:has(#asksila-widget-root) footer > div {
+  padding-right: clamp(0px, calc(828px - 50vw), 152px);
 }
 footer .wordmark {
   font-size: 25px;
@@ -1951,6 +1951,16 @@ dialog .source-note {
     width: 100%;
     justify-content: flex-end;
     font-size: 10px;
+  }
+  body:has(#asksila-widget-root) footer > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 0;
+  }
+  body:has(#asksila-widget-root) .back-to-top {
+    grid-column: 1;
+    width: fit-content;
+    margin-left: 0;
   }
 }
 @media (max-width: 520px) {
