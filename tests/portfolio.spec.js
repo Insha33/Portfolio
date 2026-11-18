@@ -35,7 +35,7 @@ test("project filters, dialogs, and canvas work with real content", async ({
   await expect(page.locator("#canvas-caption")).toHaveText(
     "Find where user needs meet business value.",
   );
-  const resume = await page.request.get("/Insha_Mustafa_Resume.pdf");
+  const resume = await page.request.get("/Insha_cv_2026.pdf");
   expect(resume.ok()).toBeTruthy();
   expect(resume.headers()["content-type"]).toContain("application/pdf");
   expect(errors).toEqual([]);

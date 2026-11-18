@@ -11,7 +11,7 @@ npm run dev
 
 `npm run build` generates `dist/`. `npm run preview` previews the production build. No backend or API keys are required.
 
-Project content is in `src/main.js`; biography and experience are in `index.html`; design tokens are in `src/style.css`. The downloadable resume is `public/Insha_Mustafa_Resume.pdf`.
+Project content is in `src/main.js`; biography and experience are in `index.html`; design tokens are in `src/style.css`. The downloadable resume is `public/Insha_cv_2026.pdf`.
 
 Features include an interactive product-thinking canvas, project filters, accessible project dialogs, resume download, and email contact/copy actions. Mobile layouts, reduced-motion preferences, and keyboard navigation are supported.
 
