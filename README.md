@@ -1,6 +1,6 @@
 # Insha Mustafa — Portfolio
 
-A responsive portfolio for a business analyst transitioning into product management, built with HTML, CSS, JavaScript, and Vite.
+A responsive portfolio for an Associate Product Manager, built with HTML, CSS, JavaScript, and Vite.
 
 ## Run
 
